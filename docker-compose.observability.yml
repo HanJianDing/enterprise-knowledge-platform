@@ -1,0 +1,54 @@
+# 可观测栈（批次4）：OTEL Collector + Jaeger + ClickHouse
+# 用法：docker compose -f docker-compose.observability.yml up -d
+# - 后端 OTEL 上报端点：http://localhost:4318/v1/traces（collector OTLP HTTP）
+# - Jaeger UI：http://localhost:16686（trace 可视化）
+# - ClickHouse：http://localhost:8123（trace 落库，SQL 分析）
+# 与现有部署（docker-compose.yml 的 postgres 等）互不冲突
+# 质检 S3：端口绑定 127.0.0.1（仅本机，演示环境）+ ClickHouse 启用认证；
+# 服务器部署时如需内网访问再按需放开并改强密码，Jaeger UI 应置于
+# 带认证的反向代理之后（UI 与 OTLP 接收端本身无认证）
+services:
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.102.0
+    container_name: obs-collector
+    command: ["--config=/etc/otel-collector-config.yaml"]
+    volumes:
+      - ./infra/otel-collector-config.yaml:/etc/otel-collector-config.yaml
+    environment:
+      # config 内 ${env:CLICKHOUSE_PASSWORD} 引用此值
+      - CLICKHOUSE_PASSWORD=${CLICKHOUSE_PASSWORD:?Set CLICKHOUSE_PASSWORD}
+    ports:
+      - "127.0.0.1:4318:4318"   # OTLP HTTP（后端上报入口）
+      - "127.0.0.1:4317:4317"   # OTLP gRPC
+    depends_on:
+      - jaeger
+      - clickhouse
+
+  jaeger:
+    image: jaegertracing/all-in-one:1.57
+    container_name: obs-jaeger
+    ports:
+      - "127.0.0.1:16686:16686"  # UI
+      # collector 经容器内网 OTLP 4317 写入（无需发布到主机；14250 已无写入方）
+    environment:
+      # 演示环境用内存存储：镜像以非 root 运行，badger 卷在 Windows
+      # Docker 下权限受限（mkdir permission denied）；压测演示的 trace
+      # 生命周期就是当天会话，内存存储足够。服务器长期部署时再换 badger
+      - SPAN_STORAGE_TYPE=memory
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:24.3
+    container_name: obs-clickhouse
+    ports:
+      - "127.0.0.1:8123:8123"   # HTTP
+      - "127.0.0.1:9000:9000"   # Native（Collector 写入）
+    environment:
+      - CLICKHOUSE_DB=otel
+      - CLICKHOUSE_USER=otel
+      # 质检建议：密码经环境变量注入（默认演示值，部署时覆盖）
+      - CLICKHOUSE_PASSWORD=${CLICKHOUSE_PASSWORD:?Set CLICKHOUSE_PASSWORD}
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+
+volumes:
+  clickhouse_data:

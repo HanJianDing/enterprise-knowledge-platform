@@ -1,0 +1,48 @@
+# 百货通智能客服 — nginx 站点配置样例
+# 使用方法：
+#   1. 复制到 /etc/nginx/sites-available/ai-cs
+#   2. 把 your.domain.com 换成你的域名
+#   3. 把 /srv/ai-cs 换成你的部署路径
+#   4. ln -s /etc/nginx/sites-available/ai-cs /etc/nginx/sites-enabled/
+#   5. nginx -t && systemctl reload nginx
+#
+# 两个必须保留的配置（漏了会在线上翻车）：
+#   - client_max_body_size >= 21m：应用上传上限 20MB，nginx 默认 1m 会先 413
+#   - proxy_buffering off：SSE 流式回答必须关缓冲，否则回答卡住不输出
+
+server {
+    listen 80;
+    server_name your.domain.com;
+
+    # 上传大小必须 ≥ 应用上限 20MB
+    client_max_body_size 21m;
+
+    # 前端构建产物（部署前在 frontend 目录执行 npm run build）
+    root /srv/ai-cs/frontend/dist;
+    index index.html;
+
+    # API 反代到后端（uvicorn --workers 1，端口 8000）
+    location /api/ {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # SSE 流式回答：必须关缓冲 + 加长读超时（LLM 生成可达数十秒）
+        proxy_buffering off;
+        proxy_read_timeout 300s;
+    }
+
+    # 带 hash 的静态资源长缓存
+    location /assets/ {
+        expires 30d;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # SPA（BrowserRouter）回退：所有未命中路径交给前端路由
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}

@@ -1,0 +1,244 @@
+[
+  {
+    "question": "郑浩的上级是谁？",
+    "kind": "neighbors",
+    "expected_entities": ["郑浩"],
+    "expected_neighbors": ["钱进"]
+  },
+  {
+    "question": "钱进的上级是谁？",
+    "kind": "neighbors",
+    "expected_entities": ["钱进"],
+    "expected_neighbors": ["刘强"]
+  },
+  {
+    "question": "王芳的上级是谁？",
+    "kind": "neighbors",
+    "expected_entities": ["王芳"],
+    "expected_neighbors": ["赵明远"]
+  },
+  {
+    "question": "张伟的上级是谁？",
+    "kind": "neighbors",
+    "expected_entities": ["张伟"],
+    "expected_neighbors": ["李慧敏"]
+  },
+  {
+    "question": "吴磊的上级是谁？",
+    "kind": "neighbors",
+    "expected_entities": ["吴磊"],
+    "expected_neighbors": ["周涛"]
+  },
+  {
+    "question": "蒋华的上级是谁？",
+    "kind": "neighbors",
+    "expected_entities": ["蒋华"],
+    "expected_neighbors": ["王芳"]
+  },
+  {
+    "question": "彭飞和刘强是什么关系？",
+    "kind": "path",
+    "expected_entities": ["彭飞", "刘强"],
+    "expected_path": ["彭飞的上级是钱进", "钱进的上级是刘强"]
+  },
+  {
+    "question": "许静和李慧敏是什么关系？",
+    "kind": "path",
+    "expected_entities": ["许静", "李慧敏"],
+    "expected_path": ["许静的上级是张伟", "张伟的上级是李慧敏"]
+  },
+  {
+    "question": "罗丹和李慧敏是什么关系？",
+    "kind": "path",
+    "expected_entities": ["罗丹", "李慧敏"],
+    "expected_path": ["罗丹的上级是张伟", "张伟的上级是李慧敏"]
+  },
+  {
+    "question": "郑浩和王建国是什么关系？",
+    "kind": "path",
+    "expected_entities": ["郑浩", "王建国"],
+    "expected_path": ["郑浩的上级是钱进", "钱进的上级是刘强", "刘强的上级是王建国"]
+  },
+  {
+    "question": "许静和王建国是什么关系？",
+    "kind": "path",
+    "expected_entities": ["许静", "王建国"],
+    "expected_path": ["许静的上级是张伟", "张伟的上级是李慧敏", "李慧敏的上级是王建国"]
+  },
+  {
+    "question": "郑浩和刘强是什么关系？",
+    "kind": "path",
+    "expected_entities": ["郑浩", "刘强"],
+    "expected_path": ["郑浩的上级是钱进", "钱进的上级是刘强"]
+  },
+  {
+    "question": "潘婷和陈静是什么关系？",
+    "kind": "path",
+    "expected_entities": ["潘婷", "陈静"],
+    "expected_path": ["潘婷的上级是何平", "何平的上级是陈静"]
+  },
+  {
+    "question": "周琴和赵明远是什么关系？",
+    "kind": "path",
+    "expected_entities": ["周琴", "赵明远"],
+    "expected_path": ["周琴的上级是王芳", "王芳的上级是赵明远"]
+  },
+  {
+    "question": "王建国和郑浩是什么关系？",
+    "kind": "path",
+    "expected_entities": ["王建国", "郑浩"],
+    "expected_path": ["王建国是刘强的上级", "刘强是钱进的上级", "钱进是郑浩的上级"]
+  },
+  {
+    "question": "钱进和郑浩是什么关系？",
+    "kind": "path",
+    "expected_entities": ["钱进", "郑浩"],
+    "expected_path": ["钱进是郑浩的上级"]
+  },
+  {
+    "question": "王建国的直接下属有哪些？",
+    "kind": "neighbors",
+    "expected_entities": ["王建国"],
+    "expected_neighbors": ["李慧敏", "赵明远", "陈静", "刘强", "孙丽", "周涛"]
+  },
+  {
+    "question": "刘强的下属有哪些？",
+    "kind": "neighbors",
+    "expected_entities": ["刘强"],
+    "expected_neighbors": ["钱进"]
+  },
+  {
+    "question": "钱进的下属有哪些？",
+    "kind": "neighbors",
+    "expected_entities": ["钱进"],
+    "expected_neighbors": ["郑浩", "彭飞"]
+  },
+  {
+    "question": "李慧敏的下属有哪些？",
+    "kind": "neighbors",
+    "expected_entities": ["李慧敏"],
+    "expected_neighbors": ["张伟"]
+  },
+  {
+    "question": "赵明远的下属有哪些？",
+    "kind": "neighbors",
+    "expected_entities": ["赵明远"],
+    "expected_neighbors": ["王芳"]
+  },
+  {
+    "question": "周涛的下属有哪些？",
+    "kind": "neighbors",
+    "expected_entities": ["周涛"],
+    "expected_neighbors": ["吴磊", "冯刚"]
+  },
+  {
+    "question": "张伟的下属有哪些？",
+    "kind": "neighbors",
+    "expected_entities": ["张伟"],
+    "expected_neighbors": ["许静", "罗丹"]
+  },
+  {
+    "question": "王总的直接下属有哪些？",
+    "kind": "neighbors",
+    "expected_entities": ["王建国"],
+    "expected_neighbors": ["李慧敏", "赵明远", "陈静", "刘强", "孙丽", "周涛"]
+  },
+  {
+    "question": "刘总监的下属有哪些？",
+    "kind": "neighbors",
+    "expected_entities": ["刘强"],
+    "expected_neighbors": ["钱进"]
+  },
+  {
+    "question": "钱经理的上级是谁？",
+    "kind": "neighbors",
+    "expected_entities": ["钱进"],
+    "expected_neighbors": ["刘强"]
+  },
+  {
+    "question": "钱多多和孙少少是什么关系？",
+    "kind": "no_intervention"
+  },
+  {
+    "question": "欧阳震华和西门吹雪是什么关系？",
+    "kind": "no_intervention"
+  },
+  {
+    "question": "郑浩的上级的上级是谁？",
+    "kind": "path",
+    "expected_entities": ["郑浩"],
+    "expected_path": ["郑浩的上级是钱进", "钱进的上级是刘强"]
+  },
+  {
+    "question": "许静的上级的上级是谁？",
+    "kind": "path",
+    "expected_entities": ["许静"],
+    "expected_path": ["许静的上级是张伟", "张伟的上级是李慧敏"]
+  },
+  {
+    "question": "周琴的上级的上级是谁？",
+    "kind": "path",
+    "expected_entities": ["周琴"],
+    "expected_path": ["周琴的上级是王芳", "王芳的上级是赵明远"]
+  },
+  {
+    "question": "郑浩的上级的上级的上级是谁？",
+    "kind": "path",
+    "expected_entities": ["郑浩"],
+    "expected_path": ["郑浩的上级是钱进", "钱进的上级是刘强", "刘强的上级是王建国"]
+  },
+  {
+    "question": "周涛的团队有哪些人？",
+    "kind": "community",
+    "expected_entities": ["周涛"],
+    "expected_members": ["冯刚", "肖燕"]
+  },
+  {
+    "question": "钱进的团队有哪些人？",
+    "kind": "community",
+    "expected_entities": ["钱进"],
+    "expected_members": ["郑浩", "彭飞"]
+  },
+  {
+    "question": "张伟的圈子有哪些成员？",
+    "kind": "community",
+    "expected_entities": ["张伟"],
+    "expected_members": ["许静", "罗丹"]
+  },
+  {
+    "question": "王芳的团队有哪些人？",
+    "kind": "community",
+    "expected_entities": ["王芳"],
+    "expected_members": ["周琴", "蒋华"]
+  },
+  {
+    "question": "研发团队有哪些人？",
+    "kind": "community",
+    "expected_entities": [],
+    "expected_members": ["吴磊", "戴军"]
+  },
+  {
+    "question": "市场团队有哪些成员？",
+    "kind": "community",
+    "expected_entities": [],
+    "expected_members": ["林晓", "曾敏"]
+  },
+  {
+    "question": "郑浩的圈子有哪些人？",
+    "kind": "community",
+    "expected_entities": ["郑浩"],
+    "expected_members": ["钱进", "彭飞"]
+  },
+  {
+    "question": "曾敏的团队有哪些人？",
+    "kind": "community",
+    "expected_entities": ["曾敏"],
+    "expected_members": ["林晓"]
+  },
+  {
+    "question": "肖燕的圈子有哪些成员？",
+    "kind": "community",
+    "expected_entities": ["肖燕"],
+    "expected_members": ["冯刚"]
+  }
+]

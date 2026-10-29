@@ -1,0 +1,21 @@
+{
+  "_note": "回答质量评估数据集（程序判定，不需要裁判）。numeric=数值准确题（回答必须包含文档中的关键数值原文）；compliance=合规题（用户版回答不得出现引用标记等违禁串，脚本会先按 stream_chat 同款后处理（去引用+截断）再判定）。",
+  "numeric": [
+    {"question": "保温杯容量多大？", "expected_substrings": ["500ml"]},
+    {"question": "USB小风扇电池容量多大？", "expected_substrings": ["2000mAh"]},
+    {"question": "桶装方便面多少钱？", "expected_substrings": ["6.5元"]},
+    {"question": "雪花酥保质期多久？", "expected_substrings": ["60天"]},
+    {"question": "机械键盘是多少键布局？", "expected_substrings": ["87键"]},
+    {"question": "芒果干保质期多久？", "expected_substrings": ["12个月"]},
+    {"question": "每日坚果一盒多少包？", "expected_substrings": ["30"]},
+    {"question": "蓝牙鼠标用什么电池？", "expected_substrings": ["5号"]}
+  ],
+  "compliance": [
+    {"question": "iPhone 15 Pro 屏幕多大？", "banned_substrings": ["[来源", "根据文档", "根据参考文档"]},
+    {"question": "退换货政策是什么？", "banned_substrings": ["[来源", "根据文档", "根据参考文档"]},
+    {"question": "保温杯是什么材质的？", "banned_substrings": ["[来源", "根据文档", "根据参考文档"]},
+    {"question": "包邮条件是什么？", "banned_substrings": ["[来源", "根据文档", "根据参考文档"]},
+    {"question": "雪花酥保质期多久？", "banned_substrings": ["[来源", "根据文档", "根据参考文档"]},
+    {"question": "你好", "banned_substrings": ["[来源", "根据文档"]}
+  ]
+}

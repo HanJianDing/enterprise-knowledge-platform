@@ -87,3 +87,5 @@ docker compose up -d --build
 ## 演示环境配置
 
 公开版本不附带本地 `.env.demo`。运行演示启动器或种子脚本前，自行设置 `DEMO_ADMIN_PASSWORD` 和 `DEMO_EMPLOYEE_PASSWORD`，并配置模型、数据库及可选图谱服务。文档中的 `CHANGE_ME_DEMO_PASSWORD` 仅为脱敏占位符。
+
+运行观测组件需设置 `CLICKHOUSE_PASSWORD`；负载测试脚本需设置 `PERF_PASSWORD`。单元测试中保留的密码字符串仅用于测试数据库中的临时虚构账号，不是可登录的部署凭据。公开仓库不包含旧提交历史、本地环境文件和实际业务数据。

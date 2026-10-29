@@ -1,0 +1,37 @@
+# OTEL Collector 配置（批次4）：接收 OTLP → 双路导出 Jaeger（可视化）+ ClickHouse（SQL 分析）
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 0.0.0.0:4318
+      grpc:
+        endpoint: 0.0.0.0:4317
+
+processors:
+  batch:
+    timeout: 5s
+    send_batch_size: 512
+
+exporters:
+  # jaeger exporter 在 collector-contrib 0.102 已移除——改用 otlp 导出到
+  # jaeger all-in-one 的 OTLP 接收端口（1.35+ 原生支持，容器内 4317）
+  otlp/jaeger:
+    endpoint: jaeger:4317
+    tls:
+      insecure: true
+  clickhouse:
+    # 密码经环境变量注入（compose 里 CLICKHOUSE_PASSWORD，默认演示值）；
+    # 批次F 验收修复：DSN 路径的 /otel 不被 exporter 识别，表建进了
+    # default 库——必须显式 database 字段指定库；async_insert 无此键
+    # （collector 0.102 的 clickhouse exporter 不支持）
+    endpoint: tcp://otel:${env:CLICKHOUSE_PASSWORD}@clickhouse:9000/otel
+    database: otel
+    ttl: 72h
+    create_schema: true
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlp/jaeger, clickhouse]

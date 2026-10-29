@@ -1,0 +1,52 @@
+[
+  {
+    "question": "员工手册包含哪些章节？",
+    "expected_docs": ["员工手册.txt"],
+    "fuzzy": false
+  },
+  {
+    "question": "员工手册里假期相关的总体规定有哪些？",
+    "expected_docs": ["员工手册.txt"],
+    "fuzzy": false
+  },
+  {
+    "question": "员工手册对考勤管理的总体要求是什么？",
+    "expected_docs": ["员工手册.txt"],
+    "fuzzy": false
+  },
+  {
+    "question": "员工手册总共涵盖几个方面的内容？",
+    "expected_docs": ["员工手册.txt"],
+    "fuzzy": false
+  },
+  {
+    "question": "管理制度汇编覆盖哪些管理领域？",
+    "expected_docs": ["管理制度汇编.txt"],
+    "fuzzy": false
+  },
+  {
+    "question": "管理制度汇编里财务相关的制度有哪些？",
+    "expected_docs": ["管理制度汇编.txt"],
+    "fuzzy": false
+  },
+  {
+    "question": "管理制度汇编中行政类制度包括哪些？",
+    "expected_docs": ["管理制度汇编.txt"],
+    "fuzzy": false
+  },
+  {
+    "question": "制度全集逐条解读涵盖哪些主题？",
+    "expected_docs": ["制度全集逐条解读.txt"],
+    "fuzzy": false
+  },
+  {
+    "question": "制度全集里与休假相关的总体解读是什么？",
+    "expected_docs": ["制度全集逐条解读.txt"],
+    "fuzzy": false
+  },
+  {
+    "question": "公司制度体系的整体框架是怎样的？",
+    "expected_docs": ["制度全集逐条解读.txt", "管理制度汇编.txt"],
+    "fuzzy": false
+  }
+]

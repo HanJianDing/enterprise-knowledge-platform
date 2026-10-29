@@ -1,0 +1,64 @@
+# 百货通智能客服 — Docker Compose 编排（三服务一键起）
+#
+# 服务拓扑：
+#   nginx(80) ──静态文件──> frontend 构建产物
+#             └─/api 反代──> backend(uvicorn 单 worker) ──> db(PostgreSQL)
+#
+# 数据持久化（容器删除数据不丢）：
+#   pgdata  ── PostgreSQL 数据
+#   chroma  ── 向量库（ChromaDB 嵌入式文件）
+#   uploads ── 知识库上传文档
+#
+# 使用：docker compose up -d --build（详见 docs/部署指南.md）
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?请在 .env 中配置 POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-ragdb}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-ragdb}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    # 不对外暴露端口：仅 backend 容器内网访问，宿主机无法直连数据库
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    restart: always
+    env_file: .env
+    environment:
+      # 容器内数据库地址（覆盖 .env 里的 localhost 值；compose 的 environment 优先于 env_file）
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:?}@db:5432/${POSTGRES_DB:-ragdb}
+      TZ: Asia/Shanghai
+      ANONYMIZED_TELEMETRY: "False"
+    volumes:
+      - chroma:/srv/app/backend/chroma_db
+      - uploads:/srv/app/backend/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+    expose:
+      - "8000"
+
+  nginx:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
+  chroma:
+  uploads:

@@ -1,0 +1,457 @@
+[
+  {
+    "question": "公司标准上下班时间是几点？",
+    "expected_docs": [
+      "考勤管理制度.txt",
+      "员工手册FAQ.md",
+      "公司公共FAQ.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "迟到十分钟以内扣多少钱？",
+    "expected_docs": [
+      "考勤管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "请假三天找谁审批？",
+    "expected_docs": [
+      "考勤管理制度.txt",
+      "员工手册FAQ.md",
+      "请假类型对照表.csv"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "病假需要提供什么证明？",
+    "expected_docs": [
+      "考勤管理制度.txt",
+      "请假类型对照表.csv"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "婚假可以休几天？",
+    "expected_docs": [
+      "年假管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "工作满一年有多少天年假？",
+    "expected_docs": [
+      "年假管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "男员工的陪产假是多少天？",
+    "expected_docs": [
+      "年假管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "年假没休完可以折现吗？",
+    "expected_docs": [
+      "年假管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "招聘面试一般有几轮？",
+    "expected_docs": [
+      "招聘流程.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "新员工入职需要带哪些材料？",
+    "expected_docs": [
+      "新员工入职指南.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "试用期一般多长时间？",
+    "expected_docs": [
+      "新员工入职指南.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "绩效考核多久进行一次？",
+    "expected_docs": [
+      "绩效管理制度.txt",
+      "管理制度汇编.txt",
+      "员工手册.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "季度奖金S档的系数是多少？",
+    "expected_docs": [
+      "绩效管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "培训时长每年不少于多少学时？",
+    "expected_docs": [
+      "培训管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "离职需要提前多少天申请？",
+    "expected_docs": [
+      "离职管理流程.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "劳动合同首次签订期限是几年？",
+    "expected_docs": [
+      "劳动合同管理办法.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "丧假直系亲属有几天？",
+    "expected_docs": [
+      "年假管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "产假多少天？",
+    "expected_docs": [
+      "年假管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "工资每个月几号发？",
+    "expected_docs": [
+      "员工手册FAQ.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "报销流程有哪几步？",
+    "expected_docs": [
+      "费用报销制度.txt",
+      "财务报销FAQ.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "市内交通费每天最多报销多少？",
+    "expected_docs": [
+      "费用报销制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "报销多久能到账？",
+    "expected_docs": [
+      "财务报销FAQ.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "一类城市住宿一晚的报销标准是多少？",
+    "expected_docs": [
+      "差旅费用标准.xlsx"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "杭州出差住宿标准多少钱一晚？",
+    "expected_docs": [
+      "差旅费用标准.xlsx"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "采购金额两万以上找谁审批？",
+    "expected_docs": [
+      "采购管理流程.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "供应商选择什么时候需要三家比价？",
+    "expected_docs": [
+      "采购管理流程.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "发票抬头写什么？",
+    "expected_docs": [
+      "费用报销制度.txt",
+      "发票管理规定.txt",
+      "财务报销FAQ.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "备用金个人最高能申请多少？",
+    "expected_docs": [
+      "备用金管理办法.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "固定资产多久盘点一次？",
+    "expected_docs": [
+      "固定资产管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "加班餐费每人每次报销多少？",
+    "expected_docs": [
+      "费用报销制度.txt",
+      "考勤管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "办公用品去哪里领？",
+    "expected_docs": [
+      "办公用品管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "会议室怎么预约？",
+    "expected_docs": [
+      "会议室使用规范.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "公司可以吸烟吗？",
+    "expected_docs": [
+      "消防安全管理制度.txt",
+      "行政事务FAQ.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "消防演练多久一次？",
+    "expected_docs": [
+      "消防安全管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "公司车辆找谁调度？",
+    "expected_docs": [
+      "车辆管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "访客来公司需要办什么手续？",
+    "expected_docs": [
+      "访客接待流程.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "快递怎么寄？",
+    "expected_docs": [
+      "快递收发规范.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "电脑坏了怎么报修？",
+    "expected_docs": [
+      "IT报障流程.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "IT一般故障多久响应？",
+    "expected_docs": [
+      "IT报障流程.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "VPN怎么安装？",
+    "expected_docs": [
+      "VPN使用指南.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "密码多久强制更换一次？",
+    "expected_docs": [
+      "账号管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "软件安装找谁申请？",
+    "expected_docs": [
+      "软件安装申请流程.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "公司网络可以私接路由器吗？",
+    "expected_docs": [
+      "网络使用规范.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "离职后账号什么时候回收？",
+    "expected_docs": [
+      "账号管理制度.txt",
+      "离职管理流程.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "代码怎么合入主分支？",
+    "expected_docs": [
+      "代码提交规范.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "常规发布窗口是什么时间？",
+    "expected_docs": [
+      "发布上线流程.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "项目延期超过几天需要说明原因？",
+    "expected_docs": [
+      "项目管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "数据库结构变更有什么要求？",
+    "expected_docs": [
+      "数据库变更规范.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "市场活动预算一万以内找谁批？",
+    "expected_docs": [
+      "市场活动申请流程.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "名片制作需要几个工作日？",
+    "expected_docs": [
+      "物料制作标准.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "展会线索展后多久完成首轮跟进？",
+    "expected_docs": [
+      "展会参展流程.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "公司社交媒体账号谁运营？",
+    "expected_docs": [
+      "社交媒体发布规范.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "员工收受业务往来单位的礼品礼金不能超过多少金额？",
+    "expected_docs": [
+      "员工行为准则.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "公司总部在哪里？",
+    "expected_docs": [
+      "公司介绍.md",
+      "公司公共FAQ.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "收到工作消息多久内要回复？",
+    "expected_docs": [
+      "内部沟通规范.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "员工福利有哪些？",
+    "expected_docs": [
+      "公司公共FAQ.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "报销流程怎么走？",
+    "expected_docs": [
+      "费用报销制度.txt",
+      "财务报销FAQ.md"
+    ],
+    "fuzzy": true
+  },
+  {
+    "question": "请假要办什么手续？",
+    "expected_docs": [
+      "考勤管理制度.txt",
+      "员工手册FAQ.md",
+      "请假类型对照表.csv"
+    ],
+    "fuzzy": true
+  },
+  {
+    "question": "电脑连不上网找谁？",
+    "expected_docs": [
+      "IT常见问题FAQ.md",
+      "IT报障流程.md"
+    ],
+    "fuzzy": true
+  },
+  {
+    "question": "年假怎么休？",
+    "expected_docs": [
+      "年假管理制度.txt",
+      "员工手册FAQ.md"
+    ],
+    "fuzzy": true
+  },
+  {
+    "question": "设备坏了找谁？",
+    "expected_docs": [
+      "IT报障流程.md",
+      "IT常见问题FAQ.md"
+    ],
+    "fuzzy": true
+  },
+  {
+    "question": "公司有哪些假期？",
+    "expected_docs": [
+      "年假管理制度.txt",
+      "考勤管理制度.txt"
+    ],
+    "fuzzy": true
+  }
+]

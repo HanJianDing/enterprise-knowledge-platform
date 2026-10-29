@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+.venv/
+venv/
+
+# 数据库
+backend/rag_system.db
+backend/rag_system_v2.db
+backend/tests/test_db.db
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# ChromaDB
+backend/chroma_db/
+backend/tests/test_chroma_db/
+backend/tests/test_uploads/
+# 演示环境数据（种子脚本生成，随库重建，不入 git）
+backend/chroma_demo/
+backend/uploads_demo/
+
+# 上传文件
+backend/uploads/
+backend/backend/
+
+# 数据归档/备份（客服数据归档、pg_dump、向量库 tar——含业务数据，绝不上 git）
+backend/archive/
+
+# 环境变量（含密钥）
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 通行证（临时文件，hooks 用）
+.claude/artifacts/*.pass
+# 双证流程在 backend 侧的产物目录（通行证/报告/pytest 日志）
+backend/.claude/
+
+# 审查/测试报告（临时生成物，不入库，避免敏感信息混入 git）
+.claude/artifacts/*.md
+
+# Logs
+*.log
+
+# 本地生成的测试/覆盖率报告（曾误提交过 950KB report.html）
+report*.html
+
+# 本地权限配置（可能含本机路径/凭据，不入库）
+.claude/settings.local.json
+
+# 同义词自动发现的运行时暂存（含真实提问提炼的词对，不入库）
+backend/config/retrieval_suggestions.json
+
+# Python SDK 构建产物（批次F 质检 P3-7）
+backend/sdk/build/
+
+# 前端审查临时目录（布局改造审查产物）
+frontend/.review-temp/
+
+# Local review artifacts and generated interview media
+.review-temp/
+.pytest_cache/
+
+.env.*
+!.env.example
+!.env.demo.example

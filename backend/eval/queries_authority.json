@@ -1,0 +1,93 @@
+[
+  {
+    "question": "考勤制度的最新规定是什么？",
+    "expected_docs": [
+      "考勤管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "员工请假要办什么手续（以考勤管理制度为准）？",
+    "expected_docs": [
+      "考勤管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "费用报销的权威规定在哪份文档？",
+    "expected_docs": [
+      "费用报销制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "账号管理制度的权威版本是哪个？",
+    "expected_docs": [
+      "账号管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "差旅费用标准的官方出处？",
+    "expected_docs": [
+      "差旅费用标准.xlsx"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "补卡申请的解读要求是什么？",
+    "expected_docs": [
+      "制度全集逐条解读.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "财务档案保存期限的解读是什么？",
+    "expected_docs": [
+      "制度全集逐条解读.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "白皮书里部署形态有哪几种？",
+    "expected_docs": [
+      "产品与技术白皮书.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "年假天数是怎么规定的？",
+    "expected_docs": [
+      "年假管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "公司绩效考核的周期是多久？",
+    "expected_docs": [
+      "绩效管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "员工每年要完成多少培训学时？",
+    "expected_docs": [
+      "培训管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "差旅住宿标准是多少？",
+    "expected_docs": [
+      "差旅费用标准.xlsx"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "员工账号由哪个部门统一管理？",
+    "expected_docs": [
+      "账号管理制度.txt"
+    ],
+    "fuzzy": false
+  }
+]

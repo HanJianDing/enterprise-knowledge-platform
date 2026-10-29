@@ -1,0 +1,176 @@
+[
+  {
+    "question": "员工手册里考勤时间怎么规定？",
+    "expected_docs": [
+      "员工手册.txt",
+      "考勤管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "员工手册包含哪些章节？",
+    "expected_docs": [
+      "员工手册.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "制度汇编里财务档案保存多久？",
+    "expected_docs": [
+      "管理制度汇编.txt",
+      "财务档案管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "2025年营业收入是多少？",
+    "expected_docs": [
+      "2025年度经营分析报告.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "2025年研发投入占比多少？",
+    "expected_docs": [
+      "2025年度经营分析报告.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "2026年经营目标是什么？",
+    "expected_docs": [
+      "2025年度经营分析报告.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "2025年净增多少员工？",
+    "expected_docs": [
+      "2025年度经营分析报告.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "新员工培训第一课讲什么？",
+    "expected_docs": [
+      "新员工入职培训教材.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "培训教材里报销有什么要求？",
+    "expected_docs": [
+      "新员工入职培训教材.md",
+      "费用报销制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "信息安全培训里钓鱼邮件怎么防范？",
+    "expected_docs": [
+      "信息安全培训教材.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "安全事件要多久内报告？",
+    "expected_docs": [
+      "信息安全培训教材.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "2025年1月经营分析会的决议是什么？",
+    "expected_docs": [
+      "2025年度会议纪要汇编.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "2026年度年会什么时候举行？",
+    "expected_docs": [
+      "关于举办2026年度年会的通知.txt",
+      "2025年度会议纪要汇编.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "国庆放假几天？",
+    "expected_docs": [
+      "关于2026年国庆节放假安排的通知.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "体检在哪个医院做？",
+    "expected_docs": [
+      "关于开展2026年度员工健康体检的通知.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "消防演练什么时候进行？",
+    "expected_docs": [
+      "关于开展2026年度消防应急演练的通知.txt",
+      "消防安全管理制度.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "网络维护期间哪些系统暂停？",
+    "expected_docs": [
+      "关于公司网络维护的通知.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "停车场施工到什么时候？",
+    "expected_docs": [
+      "关于地下停车场施工期间车辆停放的通知.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "公司制度体系整体覆盖哪些方面？",
+    "expected_docs": [
+      "制度全集逐条解读.txt",
+      "管理制度汇编.txt"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "产品白皮书包含哪些章节？",
+    "expected_docs": [
+      "产品与技术白皮书.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "白皮书里单机部署的最低硬件要求是什么？",
+    "expected_docs": [
+      "产品与技术白皮书.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "白皮书提到平台已服务多少家客户？",
+    "expected_docs": [
+      "产品与技术白皮书.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "白皮书第九章讲了哪三个客户案例？",
+    "expected_docs": [
+      "产品与技术白皮书.md"
+    ],
+    "fuzzy": false
+  },
+  {
+    "question": "术语表里混合检索的定义是什么？",
+    "expected_docs": [
+      "产品与技术白皮书.md"
+    ],
+    "fuzzy": false
+  }
+]

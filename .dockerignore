@@ -1,0 +1,17 @@
+# 构建上下文排除（镜像里不带这些；.env 尤其不能进镜像）
+.git
+.env
+.claude
+docs
+**/node_modules
+frontend/dist
+**/__pycache__
+**/*.pyc
+backend/chroma_db
+backend/uploads
+backend/tests/test_chroma_db
+backend/tests/test_uploads
+backend/*.db
+backend/*.db-journal
+*.log
+deploy/*.example

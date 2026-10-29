@@ -1,0 +1,42 @@
+[
+  {
+    "question": "报销 3000 元谁审批？",
+    "expected_approver": "部门负责人",
+    "expected_action": "审批"
+  },
+  {
+    "question": "报销 8000 元谁审批？",
+    "expected_approver": "财务总监",
+    "expected_action": "审批"
+  },
+  {
+    "question": "报销 500 元找谁审批？",
+    "expected_approver": "直属上级",
+    "expected_action": "审批"
+  },
+  {
+    "question": "报销 2000 元需要谁签字？",
+    "expected_approver": "部门负责人",
+    "expected_action": "审批"
+  },
+  {
+    "question": "采购 30 万元由谁审批？",
+    "expected_approver": "总经理",
+    "expected_action": "审批"
+  },
+  {
+    "question": "采购 2 万元谁审批？",
+    "expected_approver": "部门负责人",
+    "expected_action": "审批"
+  },
+  {
+    "question": "请假 5 天谁审批？",
+    "expected_approver": "部门负责人",
+    "expected_action": "审批"
+  },
+  {
+    "question": "请假 10 天怎么办理？",
+    "expected_approver": "人事部",
+    "expected_action": "备案"
+  }
+]

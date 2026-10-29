@@ -1,0 +1,32 @@
+[
+  {
+    "label": "baseline",
+    "ts": "2026-10-10 04:31:30",
+    "n": 30,
+    "hit_rate": 1.0,
+    "mrr": 0.9416666666666667,
+    "avg_ms": 1635.9824895858765,
+    "summary_utilization": 0.0,
+    "toc_utilization": 0.12222222222222222
+  },
+  {
+    "label": "raptor_only",
+    "ts": "2026-10-10 04:54:18",
+    "n": 30,
+    "hit_rate": 1.0,
+    "mrr": 0.9166666666666666,
+    "avg_ms": 1965.5017137527466,
+    "summary_utilization": 0.4222222222222222,
+    "toc_utilization": 0.0
+  },
+  {
+    "label": "coexist",
+    "ts": "2026-10-10 05:06:02",
+    "n": 30,
+    "hit_rate": 1.0,
+    "mrr": 0.9277777777777777,
+    "avg_ms": 2052.7072588602705,
+    "summary_utilization": 0.32222222222222224,
+    "toc_utilization": 0.08333333333333333
+  }
+]

@@ -1,0 +1,29 @@
+# 百货通智能客服 — systemd 服务样例（开机自启 + 崩溃自动重启）
+# 使用方法：
+#   1. 复制到 /etc/systemd/system/ai-cs.service
+#   2. 把 /srv/ai-cs 换成你的部署路径、把运行用户换成实际用户
+#   3. systemctl daemon-reload && systemctl enable --now ai-cs
+#
+# 必须保留的配置：
+#   - ExecStart 里的 --workers 1：向量库(ChromaDB)是进程内单例+文件存储，
+#     多 worker 会并发写坏向量库，绝不能改多
+#   - Environment=TZ=Asia/Shanghai：业务时间口径统一北京时间
+#   - Environment=ANONYMIZED_TELEMETRY=False：关闭 ChromaDB 匿名遥测
+
+[Unit]
+Description=AI Customer Service Backend (BaiHuoTong)
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/srv/ai-cs/backend
+Environment=TZ=Asia/Shanghai
+Environment=ANONYMIZED_TELEMETRY=False
+# 单 worker（勿改）；.env 由 config.py 自动从仓库根发现
+ExecStart=/srv/ai-cs/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --workers 1
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

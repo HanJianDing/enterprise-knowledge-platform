@@ -1,0 +1,27 @@
+{
+  "_note": "分类期望值口径：无具体产品名的问题按提示词规则3「无具体产品→选父分类」，如「收到的东西是坏的怎么办」「客服电话多少」期望父类「售后服务」；有产品名的按叶子分类。评估脚本不读此字段。",
+  "categories": [
+    {"id": "cat_phone", "name": "手机", "path": "手机"},
+    {"id": "cat_iphone", "name": "iPhone 16", "path": "手机 > iPhone 16"},
+    {"id": "cat_huawei", "name": "华为Mate 80", "path": "手机 > 华为Mate 80"},
+    {"id": "cat_clothing", "name": "服饰", "path": "服饰"},
+    {"id": "cat_size", "name": "尺码表", "path": "服饰 > 尺码表"},
+    {"id": "cat_service", "name": "售后服务", "path": "售后服务"},
+    {"id": "cat_return", "name": "退换货政策", "path": "售后服务 > 退换货政策"},
+    {"id": "cat_logistics", "name": "物流配送", "path": "售后服务 > 物流配送"}
+  ],
+  "queries": [
+    {"question": "苹果16现在多少钱", "keywords": [["iPhone", "苹果16"]], "category": "iPhone 16"},
+    {"question": "能退吗", "keywords": [["退换", "退货", "退款"]], "category": "退换货政策"},
+    {"question": "那个圆的耳机怎么连接", "keywords": [["耳机"]], "category": null},
+    {"question": "有XL码吗", "keywords": [["XL", "尺码"]], "category": "尺码表"},
+    {"question": "衣服买回来怎么洗", "keywords": [["洗涤", "清洗", "保养"]], "category": null},
+    {"question": "我大概一米七穿多大的", "keywords": [["170", "身高"]], "category": "尺码表"},
+    {"question": "收到的东西是坏的怎么办", "keywords": [["坏", "瑕疵", "破损", "退换", "质量问题"]], "category": "售后服务"},
+    {"question": "下单后几天能到", "keywords": [["配送", "物流", "发货"]], "category": "物流配送"},
+    {"question": "mate80电池多大", "keywords": [["Mate 80", "华为", "Mate80"]], "category": "华为Mate 80"},
+    {"question": "七天无理由退货有啥条件", "keywords": [["七天", "7天", "无理由", "退换货政策"]], "category": "退换货政策"},
+    {"question": "有没有适合女生的码", "keywords": [["女", "尺码", "码"]], "category": "尺码表"},
+    {"question": "客服电话多少", "keywords": [["客服", "电话", "热线"]], "category": "售后服务"}
+  ]
+}
